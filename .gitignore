@@ -1,0 +1,15 @@
+</> gitignore
+# Virtual environment
+.venv/
+venv/
+
+# PyCharm
+.idea/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Logs
+*.log

@@ -18,3 +18,5 @@ if __name__ == '__main__':
 # Initial framework setup
 # Initial framework setup
 # Initial framework setup
+# Initial framework setup
+#Logging feature test

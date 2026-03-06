@@ -16,9 +16,6 @@ import os
 from utils.logger import Logger
 logger = Logger.get_logger()
 
-
-
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 file_path = os.path.join(BASE_DIR, "data", "credentials.json")
 

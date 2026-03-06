@@ -1,5 +1,9 @@
+import os
+
 import pytest
 from playwright.sync_api import Playwright
+from playwright.sync_api import sync_playwright
+import pytest_html
 
 
 @pytest.fixture(scope="session")
@@ -24,7 +28,36 @@ def browserInstance(playwright: Playwright, request):
     elif browser_name == "firefox":
         browser = playwright.firefox.launch(headless=False)
 
-    context = browser.new_context()
+    context = browser.new_context(
+        record_video_dir="videos/"
+    )
     page = context.new_page()
     yield page
+
+    #-----------------test finished------------
+    video = page.video
+    page.close()
     context.close()
+    browser.close()
+
+    if video:
+        request.node.video_path = video.path()
+
+    #
+    # if video:
+    #     try:
+    #         video_path = video.path()
+    #         print("video_path" , video.path())
+    #         request.node.video_path = str(video_path)
+    #     except :
+    #         request.node.video_path = None
+
+
+
+
+
+
+
+
+
+

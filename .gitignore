@@ -15,4 +15,10 @@ __pycache__/
 logs/
 *.log
 
+#Videos
+videos/
+*.webm
 
+#Test reports
+reports/
+*.html

@@ -2,8 +2,9 @@ name: Run Automation Tests
 
 on:
   push:
-    branches: ["**"]
-  workflow_dispatch:
+    branches:
+      - develop
+      - feature/github-actions
 
 jobs:
 
